@@ -11,15 +11,24 @@
     border: 1px solid #fff;
     border-radius: 3px;
   }
+  .border-right{
+    border-color:#f5f5f5;
+  }
 }
 @media screen and (min-width:768px) and (max-width:991px) {
   .log {
     display: inline;
   }
+  .border-right{
+    border:none !important;
+  }
 }
 @media screen and (max-width:767px) {
   .log {
     display: inline;
+  }
+  .border-right{
+    border:none !important;
   }
 }
 .carousel-indicators li {
@@ -52,7 +61,9 @@
 .pen_wg2{
   width: 3rem;
 }
-
+.eye{
+  width:1.2rem;
+}
 @media screen and (max-width:767px) {
   .h1 {
     font-size: 2rem;
@@ -95,4 +106,33 @@
     border-radius: 0.5rem;
     top: 40%;
   }
+}
+.big{
+  transform: scale(1);
+  transition: 1s;
+}
+.big:hover{
+  transform: scale(1.03);
+}
+.retie_bg{
+  background: linear-gradient(186deg,rgba(0,174,255,1) 0%,rgba(57,120,255,1) 100%);
+}
+.border-bottom{
+  border-color: rgba(0,174,255,1);
+}
+.parnar_bg{
+  background: #f1f1f3;
+}
+.img_r{
+  position: relative;
+}
+.img_a{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+}
+.img_r:hover>.img_a{
+  height: 100%;
 }

@@ -11,3 +11,6 @@ ul{list-style: none;}
 body {
   background: #f6f6f6
 }
+.font_small{
+  font-size: 0.8rem;
+}
