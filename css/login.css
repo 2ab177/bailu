@@ -32,3 +32,21 @@
   background-repeat: no-repeat;
   background-position: 0.8rem 1.1rem;
 }
+.input3 {
+  background-color: #fff;
+  background-image: url(../image/login_06.png);
+  background-repeat: no-repeat;
+  background-position: 0.8rem 1.1rem;
+}
+.input4 {
+  background-color: #fff;
+  background-image: url(../image/login_09.png);
+  background-repeat: no-repeat;
+  background-position: 0.8rem 1.1rem;
+}
+.input5 {
+  background-color: #fff;
+  background-image: url(../image/login_10.png);
+  background-repeat: no-repeat;
+  background-position: -0.2rem 0rem;
+}
