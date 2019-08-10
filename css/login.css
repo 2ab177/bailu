@@ -50,3 +50,23 @@
   background-repeat: no-repeat;
   background-position: -0.2rem 0rem;
 }
+.yc{
+  display: none;
+}
+.yc_fail,.yc_input ,.yc_succ{
+  display: block;
+  padding-left: 20px;
+  background-repeat:no-repeat;
+  background-position:left center;
+  background-size: 1rem;
+  text-align: left;
+}
+.yc_input{
+  background-image:url("../image/login/login_12.png");
+}
+.yc_fail{
+  background-image:url("../image/login/login_11.png");
+}
+.yc_succ{
+  background-image:url("../image/login/login_05.png");
+}

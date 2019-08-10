@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimal-ui:ios">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimal-ui:ios">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="css/bootstrap.css">
@@ -12,6 +14,7 @@
   <link rel="stylesheet" href="css/comm.css">
   <link rel="stylesheet" href="css/login.css">
 </head>
+
 <body>
   <div class="container-fluid px-0">
     <div class="bg-white d-flex justify-content-center">
@@ -19,17 +22,71 @@
     </div>
     <div class="text-center input_w mx-auto">
       <h3 class="mt-5 pt-5 mb-3">注册账户</h3>
-      <p >如果您已有 Egret 统一账号，请<a href="">点此</a>登陆。</p>
-      <input class="input_border input-group py-3 pl-5 input3" type="text" placeholder="邮箱">
-      <input class="input_border mt-3 input-group py-3 pl-5 input1" type="text" placeholder="用户名">
-      <input class="input_border mt-3 input-group py-3 pl-5 input2" type="password" placeholder="密码">
-      <input class="input_border mt-3 input-group py-3 pl-5 input4" type="password" placeholder="确认密码">
+      <p>如果您已有 Egret 统一账号，请<a href="">点此</a>登陆。</p>
+      <input class="input_border input-group py-3 pl-5 input3" type="text" placeholder="邮箱" name="email"
+        autocomplete="off">
+      <span class="yc">请输入格式正确邮箱</span>
+      <input class="input_border mt-3 input-group py-3 pl-5 input1" type="text" placeholder="用户名" name="uname"
+        autocomplete="off">
+      <span class="yc">10个字符以内的字母、数字或下划线的组合</span>
+      <input class="input_border mt-3 input-group py-3 pl-5 input2" type="password" placeholder="密码" name="pwd">
+      <span class="yc">6-10个字符以内的字母、数字的组合</span>
+      <input class="input_border mt-3 input-group py-3 pl-5 input4" type="password" placeholder="确认密码" name="apwd">
+      <span class="yc">请再次输入密码</span>
       <div class="d-flex justify-content-between mt-3 ">
         <input class="input_border input-group py-3 pl-5 input5 w-50" type="text" placeholder="验证码">
         <a class="d-inline-block btn btn-outline-secondary input_border w-25 pt-3" href="">验证码</a>
       </div>
       <a class="btn btn-primary mx-auto w-50 py-2 my-4" href="">注册</a>
-    </div>  
+    </div>
   </div>
+  <script>
+    var txtName = document.getElementsByName("uname")[0];
+    var txtPwd = document.getElementsByName("pwd")[0];
+    var txtApwd = document.getElementsByName("apwd")[0];
+    var txtEmail = document.getElementsByName("email")[0];
+    txtApwd.onfocus = txtEmail.onfocus = txtName.onfocus = txtPwd.onfocus = function () {
+      var txt = this;
+      var p = txt.nextElementSibling;
+      p.className = "yc_input";
+    }
+
+    function vali(txt, reg) {
+      var bool = reg.test(txt.value);
+      var p = txt.nextElementSibling;
+      if (bool) {
+        p.className = "yc_succ";
+      } else {
+        p.className = "yc_fail";
+      }
+      return bool;
+    }
+    txtName.onblur = function () {
+      var reg = /^\w{1,10}$/;
+      vali(this, reg);
+    }
+    txtPwd.onblur = function () {
+      var reg = /^[0-9A-Za-z]{6,10}$/;
+      vali(this, reg);
+    }
+    txtEmail.onblur = function () {
+      var reg = /\w+@\w+\.\w+(\.cn)?/;
+      vali(this, reg);
+    }
+    txtApwd.onblur = function () {
+      var txt = this;
+      var p = txt.nextElementSibling;
+      if (txtPwd.value !== "") {
+        if (txtPwd.value === txtApwd.value) {
+          p.className = "yc_succ";
+        } else {
+          p.className = "yc_fail";
+        }
+      } else {
+        p.className = "yc_fail";
+      }
+    }
+  </script>
 </body>
+
 </html>
