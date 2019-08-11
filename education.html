@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimal-ui:ios"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/comm.css" />
+    <link rel="stylesheet" href="css/education.css" />
+  </head>
+  <body>
+    <div class="container mx-auto position-relative">
+      <div class="d-flex">
+        <div class="position-relative w-50">
+          <img class="position-absolute w-100" src="image/bljy/download.png" alt="" />
+          <img class="position-absolute w-100" src="image/bljy/5.png" alt="" />
+        </div>
+        <div class="position-relative w-50 h-100">
+          <button class="btn btn-danger h-25 button_top">小鸡炖蘑菇</button>
+          <button class="btn btn-primary h-25 d-block button_top">猪肉炖粉条</button>
+          <button class="btn btn-success h-25 d-block button_top">锅包肉</button>
+          <button class="btn btn-warning h-25 button_top">酸菜汆白肉</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      var xj=document.getElementsByTagName("button")[0];
+      var zr=document.getElementsByTagName("button")[1];
+      var img1=document.getElementsByTagName("img")[0];
+      var img2=document.getElementsByTagName("img")[1];
+      var index=10;
+      xj.onmouseover=function(){
+        img1.style.zIndex=index++;
+      }
+      zr.onmouseover=function(){
+        img2.style.zIndex=index++;
+      }
+
+    </script>
+  </body>
+</html>

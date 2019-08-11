@@ -1,0 +1,15 @@
+.button_top{
+  border-radius:0;
+}
+.height{
+  height: 324px;
+}
+.posi_ab{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.float-left{
+  z-index: 100;
+}

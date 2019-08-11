@@ -8,3 +8,19 @@
 .font-weight-bold{
   font-size: 4rem;
 }
+.bg2{
+  background-image: url(../image/zongbao/advantage_bg.png);
+  background-position: center bottom;
+  background-color: black;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.bianse:hover{
+  background: #0aaeed;
+}
+@media screen and (max-width:767px){
+  .zbmk4{
+    width: 60% !important;
+    margin-bottom: 1rem;
+  }
+}
